@@ -1,102 +1,102 @@
 return(function(...)
-local J={"\061";"\064\126";"D81zw/7SsMpm05TnzzsT3yNevGqD7CGqyIo4m8y4TzSokLFZffJq8p7OSki0FGLZHMDbNBG2M/V7zqB+6mXC3rrdQN2vy+d6de7L1ck8YSzzK7hPxTogY7p80BCCacEcUqTxakeWBtf8c8QK8bAF1nFgPbSmiGeEq5KhsmqwdfEY8sN0whGm2yGwqyt64r8IRghZOyYH/IN=";"\147\041\175\007\031\018\119\243\054\204\206\093\089\226\249\057";"\013\016\020\015\003\014\008\017\019\012\007\010";"\054\055\101\053\102\102\102\052";"xUnKQ/ofRFUPQjJ89ufRwzwLxSBZLvK5vcyiPDdqjVXrFxUbwDzWlGXMKhw61u/gRGpkilJTbfgqXDIapZPYss9qARvmpGbAmpSS6jr9ByTMQQ+BtaXtg6Q8xRL1T5y6R85tRUHzzPjHn2ZtXjvWWCmiBV==";"odVbEkJpQ3TWt9GfavZAIXFLCBSZA/FYDiwQDgtLNXCtTuDlbfoNLpFcE+S1baKXURHwjufSAE3qbhKh2ACdU7Fs9F8UGOqcxZ3PbAlrTk/wbQAZFckQ3RshJ1upDKcuLfpUXLFVUUyDdb4Z7yZW8Ao8tBBDpt0=";"\146\063\048\025\023\024\098\069\049\249\221\115\254\094\143\061";"1oLWaNhkGKQL5qAdXQCj2WZRiHikfb1vFNvK3b8h9L1SqvWrs9ne1e3Q7ISfLwylTl3Pm5HheljJ8ESXnYXgQVGCOX//OvSN3WZbIdiBdTqlf2C6Cf4GN7zcR4IXSNKsmb/ckV217Qj2wuPJzz98EssdthC8OnkZ2UqUOqhx7hy+SVI9l/Ocg8Syf0SxHw4z+kFdy7DNNaxFy3jK9jaXSK9YKo5=";"\116";"Bz8jTzskRNt15RRNu+iyEIA+K9dfUzvk5cgIdTe932jcn3AAxthfjRMVad4EyrbgniyOb6LDGsX0btXICZ5s7kXM4ZPaueDdYq0merVvJnABlkwbQkdAUhaCo7uAUIR46OiQS9ljVjm+lH7KooLW5NtO3Xvi1Dg=";"1DmHr0WanIFNHMrvd6yg3neAd8GUPC0iCOhBocuvg/Pg/7JbNCfHqNI+9sSBBNDdJrh5DKHCn72M0rWkvVr0DavDjlLIeF6qHSmkcwCGIOkXjKmJX94cp1Umn241nXiRFUtNHEVUffqabiXI/jvl0uh2";"RqKhrfZYQl4k00AdwwNdoJ6xpbmMehZaGfvdTZEPZpu9MJIQW9vdtjlKHtvUkWC2OtlsKC+XlXT51ot0zthECaQnzqC8w1q7CscqH5X/WFC7Xfdmp+lLHLIU0JfiLr7CVnoOHdEhQN0zNvgw2MkMNJ5Ijl4b+2hdUFuw3YrZxIyrHS3r569=";"nj9gXcBM+LSBmeFkLWsP3iMyi628sGC5zPI6kVjdXJAU8wswcfOI0MyVjVY6Pl21Ax4Ik9jMUFgCQYhAy1lcf79VonB5twU5W3MAKw1w31m+25nAP/lLgmnG/IkOZyz8ersncw/rYG33g95YiLhve3nbk/tXVmpA";"FDjxS1QZhdw8dD6gSrP611X6ABFO4Y5YhEI9nYPoa8Pkg6Vvz0aAobwuRNyVgXC0Ix2RU0DzGMt/oH0zW22CYmpEj9oME5pviqrC64tiQoNFHOhZpU/l0esxJcTN9ZMHArB/50aWB7ryxXav6/7v";"7e3QHELTnlswQczUD6rnjFXeZDxvD3OKMgNZ+MiMUJwNdFwdyyH4TOE//6iTWX7UEnQi5UgImoxJl/Bcorx7JBsQ4s3AC8p3g+sHI8jc4ebPUN7IPAGNXGoa4l/uBkMRgr7/qunlhZ7l4sbEUvCuWDk7DLSJfUVCUaJycsSKg1/GNKRyNT33KrKVmcbRiDVNFl==";"\086\115\075\071\107\051\070\090\102\043\101\067\121\118\085\074\050\065\117\055\078\052\080\049\089\079\056\068\110\076\099\113\108\105\084\088\119\083\087\114\053\116\073\111\098\047\082\100\103\066\097\109\120\069\072\112\048\081\122\106\057\077\104\054";"Vc6ErRbgZlmlQotdZGQ4dBSwjPcecXOChHEk0H14qbMqXMANNc9LfTmGocAbg7nvlHoPQKnbesj6f/sDGv0Q3AO7N9OeWueE2sIqnycMOvwMJDKYYz00jZw+498aedpZWwFDLaXQklDymTROsRWKwqqHNQ+6goW3JxHJd0xgEiIPorq6YkUsY+Pc5Qfyu5b=";"HItl/GSYh0WMRYEX+8c+nFnbbMYPs1A49F7XZAG8zi5/4qOuIjBKDsJ8zB2MEwwGOma6KNJq9FGv4vVewUbnVZUVREmLNURMv0NXoozUs5jWEx/ckrmzNhGe7a3dNIH1LNVFC51bbjN=";"\098\097\100\032\112\097\121\108\111\097\100"};
-local function T(T)return J[T-0xDE5B]end
-local D,RL,G,FG,MR,M,ZG=string.char,string.byte,table.concat,math.floor,string.sub,error,load
-local Z=loadstring
-local X=setfenv
-local N0=getfenv and getfenv(1) or _ENV
-local V3={}
-local VZ,QK,SQ
-local function Mp(MX)
-local V={}
-local T8=(0xC7-0xC7)
-local JN=(0x4A-0x4A)
-local W=(0x42-0x42)
-for XM=(0x1+0x0),#MX do
-local F=MR(MX,XM,XM)
-if F==T(0xDE5C) then break end
-local Wm=V3[F]
-if Wm==nil then M(T((0xDA9+0xD0C7)),(0x40-0x40)) end
-JN=JN*(0x1+0x3F)+Wm
-W=W+0x6
-if W>=(0x3+0x5) then
-W=W-(0x6+0x2)
-T8=T8+(0x1+0x0)
-V[T8]=D(FG(JN/(0x2^W))%(0xD3+0x2D))
-JN=JN%((0x2+0x0)^W)
+local J={"\064\126";"RwfAJpaCoyCGJqPf";"\163\021\181\071\080\112\103\181\023\227\092\102\027\146\143\189";"W0OFS5eiAG7W9Fd5xA==";"\116";"\253\035\032\034\101\036\223\024\138\077\167\176\001\102\047\050";"\061";"\098\097\100\032\112\097\121\108\111\097\100";"\114\052\113\109\118\071\103\122\050\067\107\119\076\077\102\072\073\055\112\120\079\075\111\043\082\074\057\053\097\078\104\068\116\049\083\089\054\100\121\051\070\066\098\056\117\080\099\086\065\115\110\087\090\101\088\047\069\108\048\106\105\085\084\081";"NVOQ3uUC6/Ve5o6=";"Y5YA6WhDvKjTNUPO";"\002\010\004\011";"\050\049\102\056\101\100\054\098"};
+local function T(T)return J[T-(0x22AF+0x4BB8)]end
+local Pn,MB,Wl,CP,M,K,G=string.char,string.byte,table.concat,math.floor,string.sub,error,load
+local D=loadstring
+local W=setfenv
+local Cx=getfenv and getfenv(1) or _ENV
+local R={}
+local Zw,Z,B
+local function Vx(KH)
+local LL={}
+local V4=(0x7A-0x7A)
+local Wh=(0xF0-0xF0)
+local Rr=(0xCF-0xCF)
+for Qv=0x1,#KH do
+local PV=M(KH,Qv,Qv)
+if PV==T(0x6E6E) then break end
+local TS=R[PV]
+if TS==nil then K(T(0x6E6F),(0x98-0x98)) end
+Wh=Wh*(0x19+0x27)+TS
+Rr=Rr+(0x3+0x3)
+if Rr>=0x8 then
+Rr=Rr-(0x7+0x1)
+V4=V4+(0x1+0x0)
+LL[V4]=Pn(CP(Wh/((0x1+0x1)^Rr))%(0xE+0xF2))
+Wh=Wh%(0x2^Rr)
 end
 end
-return G(V)
+return Wl(LL)
 end
-local function Rx(Th,Dq)
-local XD=(0x1B-0x1B)
-local JT=0x1
-for _=(0x1+0x0),(0x4+0x4) do
-if (Th%(0x1+0x1))~=(Dq%(0x2+0x0)) then XD=XD+JT end
-Th=FG(Th/(0x1+0x1))
-Dq=FG(Dq/0x2)
-JT=JT*(0x2+0x0)
+local function Sc(XR,K3)
+local SK=(0x2E-0x2E)
+local P0=(0x1+0x0)
+for _=0x1,(0x2+0x6) do
+if (XR%(0x2+0x0))~=(K3%0x2) then SK=SK+P0 end
+XR=CP(XR/0x2)
+K3=CP(K3/(0x1+0x1))
+P0=P0*0x2
 end
-return XD
+return SK
 end
-local function RB()
-local R=T(0xDE6D)
-for Z6=0x1,#R do V3[MR(R,Z6,Z6)]=Z6-(0x1+0x0) end
+local function Rz()
+local ZP=T((0x21DC+0x4C94))
+for NT=0x1,#ZP do R[M(ZP,NT,NT)]=NT-0x1 end
 end
-local function BM()
-local RH=T((0x935F+0x4B05))
-local K=T((0xD8CE+0x591))
-SQ={}
-for WS=(0x1+0x0),#RH do
-SQ[WS]=Rx(RL(RH,WS),RL(K,WS))
+local function TD()
+local Wp=T((0x5EF9+0xF74))
+local V=T((0x3076+0x3DF4))
+B={}
+for GM=0x1,#Wp do
+B[GM]=Sc(MB(Wp,GM),MB(V,GM))
 end
 end
-local function RV()
-local Z9=T(0xDE60)
-local NX={}
-QK=(0x1-0x1)
-local B0={}
-local KM=(0x45-0x45)
-for Sm=0x1,#Z9 do
-local Vc=RL(Z9,Sm)
-local NF=T(0xDE5B+Vc)
-local Ts=Mp(NF)
-local Xz=(0xB7-0xB7)
-for JF=0x1,#SQ do
-Xz=(Xz*(0x11+0x10)+SQ[JF]+Sm*(0x6+0xB))%4294967296
+local function P()
+local WC=T(0x6E73)
+local W0={}
+Z=(0xDF-0xDF)
+local Zb={}
+local KJ=(0x33-0x33)
+for Tq=0x1,#WC do
+local N=MB(WC,Tq)
+local L=T(0x6E67+N)
+local J0=Vx(L)
+local TM=(0x6-0x6)
+for Nf=0x1,#B do
+TM=(TM*0x21+B[Nf]+Tq*0x11)%4294967296
 end
-for JF=0x1,#Ts do
-Xz=(Xz*(0xFC532+0x9A0DB)+(0x481ED8+0x3C26D487))%4294967296
-local Md=FG(Xz/0x10000)%(0xD8+0x28)
-local P=RL(Ts,JF)
-local Wd=Rx(P,Md)
-QK=(QK*0x21+Wd+Md+Sm)%4294967296
-KM=KM+(0x1+0x0)
-B0[KM]=D(Wd)
-if KM>=0x2000 then NX[#NX+0x1]=G(B0);B0={};KM=(0x23-0x23) end
+for Nf=(0x1+0x0),#J0 do
+TM=(TM*0x19660D+0x3C6EF35F)%4294967296
+local Zh=CP(TM/0x10000)%0x100
+local X5=MB(J0,Nf)
+local D1=Sc(X5,Zh)
+Z=(Z*0x21+D1+Zh+Tq)%4294967296
+KJ=KJ+(0x1+0x0)
+Zb[KJ]=Pn(D1)
+if KJ>=(0x118B+0xE75) then W0[#W0+0x1]=Wl(Zb);Zb={};KJ=(0x80-0x80) end
 end
-if KM>(0x5F-0x5F) then NX[#NX+0x1]=G(B0);B0={};KM=(0x6D-0x6D) end
+if KJ>(0xE-0xE) then W0[#W0+0x1]=Wl(Zb);Zb={};KJ=(0x59-0x59) end
 end
-VZ=G(NX)
+Zw=Wl(W0)
 end
-local function WT()
-local DC=""
-local Xh=QK
-for _=0x1,0x8 do
-local Sk=Xh%(0xD+0x3)
-if Sk<(0x7+0x3) then DC=D(0x30+Sk)..DC else DC=D((0x28+0x2F)+Sk)..DC end
-Xh=FG(Xh/0x10)
+local function MG()
+local GB=""
+local WS=Z
+for _=(0x1+0x0),(0x8+0x0) do
+local Tz=WS%0x10
+if Tz<0xA then GB=Pn((0x19+0x17)+Tz)..GB else GB=Pn((0x3C+0x1B)+Tz)..GB end
+WS=CP(WS/0x10)
 end
-if DC~=T(0xDE61) then M(T(0xDE70),(0xE7-0xE7)) end
-local N,Sh
-if Z then N,Sh=Z(VZ,T(0xDE5D));if N and X then X(N,N0) end else N,Sh=ZG(VZ,T(0xDE5D),T(0xDE66),N0) end
-if not N then M(Sh,(0x4D-0x4D)) end
-return N
+if GB~=T(0x6E74) then K(T(0x6E6F),(0x31-0x31)) end
+local Bk,SB
+if D then Bk,SB=D(Zw,T(0x6E68));if Bk and W then W(Bk,Cx) end else Bk,SB=G(Zw,T((0x58A+0x68DE)),T((0x6294+0xBD8)),Cx) end
+if not Bk then K(SB,(0xD6-0xD6)) end
+return Bk
 end
-local Dl={RB,BM,RV,WT}
-local Ht={0x1,(0x1+0x1),(0x2+0x1),0x4}
-Dl[Ht[(0x1+0x0)]]()
-Dl[Ht[0x2]]()
-Dl[Ht[(0x1+0x2)]]()
-return Dl[Ht[0x4]]()(...)
+local Q={Rz,TD,P,MG}
+local Qb={0x1,0x2,0x3,0x4}
+Q[Qb[0x1]]()
+Q[Qb[0x2]]()
+Q[Qb[0x3]]()
+return Q[Qb[0x4]]()(...)
 end)(...)
