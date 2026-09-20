@@ -1,87 +1,102 @@
 return(function(...)
-local J={"A7zef8OVYHXbOe7AiWZIkQ==";"\116";"\065\066\067\068\069\070\071\072\073\074\075\076\077\078\079\080\081\082\083\084\085\086\087\088\089\090\097\098\099\100\101\102\103\104\105\106\107\108\109\110\111\112\113\114\115\116\117\118\119\120\121\122\048\049\050\051\052\053\054\055\056\057\043\047";"\098\097\100\032\112\097\121\108\111\097\100";"\061";"\100\102\057\053\050\053\052\054";"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";"2XgwvkPRwfwDRjPDg/QCsKDpFMxDRtOwM9xjehd9G0unylLgFNgb5FwWf9NlrbZSljnTp5OYy+pabnCsyAF2Owi7/TJStlHd6W5TVMqz6sAqXgO5IIV+8llHdW3e07zeJL+Hlb2+AGk6bRt3+knQw47KasqaebMT2htgpczFABSLTVBWnntryqESj4YkDNqf3JQGLDJRiJT8MLgdneoFAGuUT/3b90hrFP3FA+5DNZ1a7xndHmPjy5cqmeNTX/+uN89+bC27KaGKv/Xq+8NDQXnXvV/yVWEeG1tfbyPVXTlSggdaoG41buHxo93wq/DQIaoU3DiP9AGYC/hEOCaM7b1hKKNbDMa83ss/j44ATYKL/XbboVJXU2jg1GS0J0RuwtMMhVbpS6Npt7J3HXfy3t6LO9oLYSSuo1RpP06TO5bQetUKIQJVVHuY20d1cwj6jAh5BMUkbCokO8DNYDPxSPJSROj4cBfCWrjU9KDikDT9r8EsGe5FYz4MePz8ZEq11tdHjMZdHU2jtjBuLUqCJTss0pXovQS4aNF1zcF2ExKn8ZDXM84Cam3hVyzMzaLK2l0eEVPy7Vt+daCnrR1I2hGyxj2nVh6HgHqz60MiPQOpth1qfiSoNRPwgQUF0gLnkZT3M8iL9f8CwrPcAv9jtti0xyiawKE6EMf/KLE/nW5qOOai+em4PcPbqpTLhDWmth6IMooy/V2NBKj2tlARhnTgLzttOh7NiMw1mydrv/zie4IsQsZA/Eiu2RXpulHnlUCXChU85DD5K1YeNY+tHCj62D8fCoxTvz+Fr37pOQLcoJpcTbhYPABwT9nJt4hmzrtqYedWr7+xDOxvG1TK5a5WSyiyIA/eCwebQp0O718/B7ue1FdhNicMqDVAOc4/USRHUvQC7tPXoSgAFtnTnUumvlHbA4xfocbkGVNbbGXbys/sZei1fBD98KwKD/vBMXy+dVohLYsLcxPtsIuCwnGvZw1m34akuMvV5pRDTia5n2pkDbvyUKF1K3rdQGqqI1uo1pz14mYNPQMI1zXfceqyvoFsYrwIRxToSY8OHyRJ4fhrg2J3rGYs4wtrW8M9SB2r+mqiXDbP1hqm1DCDCyWfInbRFpHZrnDdjGwhh7Penqbq/+QUnViSrGg5V6ZwaV7yNZcX1cr3bDuBsQbcUkiFuNp5wW1D2qMztSBLEgp/U2st3CPtjoV0Wo/I8P/sTc/x99/q4tQaPIJZ6KSrsFAKsN6xlUMgDKmtZLU819Ws3OFYpBnGt72j3wo0t7fioffm6JCgbAwD6NJxSH9ihzDQ/JAlwxJR2EQxJtNZHn6gPl3YEODf5gPxtYsn3+JBo5AJq5wHfKiLkUK+6Ismvg2FfsHG0Re+OygicV08sTeSaFikKt1gK2ZLZfC6wVzSu53AffjRi4Jtj6umva0QUa01lTGDx1jEFJzrgjD08/0go8eTdBnAlYFjtB8MFFBeH7GkGDZIUfu+mAXmIlQA/NFgRMaZnViROcxB5UloodgHI45VsALnzYHTJhSmxqS8ngg8WYemZGxcJ+VD1u8V3GHHBdvA6OFvNv8KUlQi9fHzIyWMF+ghVCIBx1iN1ght9h5E/l+Ri2x+E7407PPHR2uNX/maZi8WQ5B2cb2F//yExHu9Cu3w5A+FM/y/w05KCE5ANo4NwKcI3R2vnkML6ncdECnBEGD2ZtYfTMUv41yjfj/iDxlhR7jDK1bB64TRLwNXwdbpB88I0NW2iWYYoNaoj5XOeIl+bJS0y+4KS+G3Ch8119sm3Qi1fpZfFCsr5G5T06bwt95+ZbOPY73NkvQySug2lCEr/TSK0CwmXPr7c0VTABryobPSjJEm332TJo8JziAeoPAOfig7/kL/UtAVH/UdB6HgWWMGQeKunOIMnOw8oRu71bdQAWOURal6IvWjbduTFphQK1pdM16sYj9r2pp4xzlDF6PZ1qy/6uqrj9KlXWxDJ0jmMZ6BNaBPXD4GvQYn4LsbPkuE64m4lh0ZxKirpV5cUM0GClakzQCg4hfwgnuiJPDoLFchMxRfRl7bkg==";"\064\126"};
-local function T(T)return J[T-0x121AE]end
-local X,L,C,QB,P,C9,M3=string.char,string.byte,table.concat,math.floor,string.sub,error,load
-local Q=loadstring
-local PV=setfenv
-local Xj=getfenv and getfenv(1) or _ENV
-local B={}
-local TN,F8,Gg,QG
-local function Lx(VV)
-local G2={}
-local G=(0xA8-0xA8)
-local Mj=(0x93-0x93)
-local W=(0xF0-0xF0)
-for WN=0x1,#VV do
-local V6=P(VV,WN,WN)
-if V6==T(0x121B3) then break end
-local Ff=B[V6]
-if Ff==nil then C9(T((0x2761+0xFA51)),(0xA-0xA)) end
-Mj=Mj*0x40+Ff
-W=W+(0x6+0x0)
-if W>=(0x5+0x3) then
-W=W-0x8
-G=G+0x1
-G2[G]=X(QB(Mj/(0x2^W))%(0x97+0x69))
-Mj=Mj%((0x2+0x0)^W)
-end
-end
-return C(G2)
-end
-local function Z(S0,S)
-local F=(0x3C-0x3C)
-local PT=0x1
-for _=0x1,(0x5+0x3) do
-if (S0%(0x2+0x0))~=(S%0x2) then F=F+PT end
-S0=QB(S0/0x2)
-S=QB(S/(0x1+0x1))
-PT=PT*(0x2+0x0)
-end
-return F
-end
-local function Qn()
-local QN=T((0x11A9+0x11008))
-for LD=0x1,#QN do B[P(QN,LD,LD)]=LD-0x1 end
-end
-local function Ws()
-TN=Lx(T((0x75+0x12140)))
-F8=Lx(T((0xA735+0x7A81)))
-if #TN~=#F8 then C9(T((0x9165+0x904D)),(0x27-0x27)) end
-end
-local function Vt()
+local J={"\061";"\064\126";"D81zw/7SsMpm05TnzzsT3yNevGqD7CGqyIo4m8y4TzSokLFZffJq8p7OSki0FGLZHMDbNBG2M/V7zqB+6mXC3rrdQN2vy+d6de7L1ck8YSzzK7hPxTogY7p80BCCacEcUqTxakeWBtf8c8QK8bAF1nFgPbSmiGeEq5KhsmqwdfEY8sN0whGm2yGwqyt64r8IRghZOyYH/IN=";"\147\041\175\007\031\018\119\243\054\204\206\093\089\226\249\057";"\013\016\020\015\003\014\008\017\019\012\007\010";"\054\055\101\053\102\102\102\052";"xUnKQ/ofRFUPQjJ89ufRwzwLxSBZLvK5vcyiPDdqjVXrFxUbwDzWlGXMKhw61u/gRGpkilJTbfgqXDIapZPYss9qARvmpGbAmpSS6jr9ByTMQQ+BtaXtg6Q8xRL1T5y6R85tRUHzzPjHn2ZtXjvWWCmiBV==";"odVbEkJpQ3TWt9GfavZAIXFLCBSZA/FYDiwQDgtLNXCtTuDlbfoNLpFcE+S1baKXURHwjufSAE3qbhKh2ACdU7Fs9F8UGOqcxZ3PbAlrTk/wbQAZFckQ3RshJ1upDKcuLfpUXLFVUUyDdb4Z7yZW8Ao8tBBDpt0=";"\146\063\048\025\023\024\098\069\049\249\221\115\254\094\143\061";"1oLWaNhkGKQL5qAdXQCj2WZRiHikfb1vFNvK3b8h9L1SqvWrs9ne1e3Q7ISfLwylTl3Pm5HheljJ8ESXnYXgQVGCOX//OvSN3WZbIdiBdTqlf2C6Cf4GN7zcR4IXSNKsmb/ckV217Qj2wuPJzz98EssdthC8OnkZ2UqUOqhx7hy+SVI9l/Ocg8Syf0SxHw4z+kFdy7DNNaxFy3jK9jaXSK9YKo5=";"\116";"Bz8jTzskRNt15RRNu+iyEIA+K9dfUzvk5cgIdTe932jcn3AAxthfjRMVad4EyrbgniyOb6LDGsX0btXICZ5s7kXM4ZPaueDdYq0merVvJnABlkwbQkdAUhaCo7uAUIR46OiQS9ljVjm+lH7KooLW5NtO3Xvi1Dg=";"1DmHr0WanIFNHMrvd6yg3neAd8GUPC0iCOhBocuvg/Pg/7JbNCfHqNI+9sSBBNDdJrh5DKHCn72M0rWkvVr0DavDjlLIeF6qHSmkcwCGIOkXjKmJX94cp1Umn241nXiRFUtNHEVUffqabiXI/jvl0uh2";"RqKhrfZYQl4k00AdwwNdoJ6xpbmMehZaGfvdTZEPZpu9MJIQW9vdtjlKHtvUkWC2OtlsKC+XlXT51ot0zthECaQnzqC8w1q7CscqH5X/WFC7Xfdmp+lLHLIU0JfiLr7CVnoOHdEhQN0zNvgw2MkMNJ5Ijl4b+2hdUFuw3YrZxIyrHS3r569=";"nj9gXcBM+LSBmeFkLWsP3iMyi628sGC5zPI6kVjdXJAU8wswcfOI0MyVjVY6Pl21Ax4Ik9jMUFgCQYhAy1lcf79VonB5twU5W3MAKw1w31m+25nAP/lLgmnG/IkOZyz8ersncw/rYG33g95YiLhve3nbk/tXVmpA";"FDjxS1QZhdw8dD6gSrP611X6ABFO4Y5YhEI9nYPoa8Pkg6Vvz0aAobwuRNyVgXC0Ix2RU0DzGMt/oH0zW22CYmpEj9oME5pviqrC64tiQoNFHOhZpU/l0esxJcTN9ZMHArB/50aWB7ryxXav6/7v";"7e3QHELTnlswQczUD6rnjFXeZDxvD3OKMgNZ+MiMUJwNdFwdyyH4TOE//6iTWX7UEnQi5UgImoxJl/Bcorx7JBsQ4s3AC8p3g+sHI8jc4ebPUN7IPAGNXGoa4l/uBkMRgr7/qunlhZ7l4sbEUvCuWDk7DLSJfUVCUaJycsSKg1/GNKRyNT33KrKVmcbRiDVNFl==";"\086\115\075\071\107\051\070\090\102\043\101\067\121\118\085\074\050\065\117\055\078\052\080\049\089\079\056\068\110\076\099\113\108\105\084\088\119\083\087\114\053\116\073\111\098\047\082\100\103\066\097\109\120\069\072\112\048\081\122\106\057\077\104\054";"Vc6ErRbgZlmlQotdZGQ4dBSwjPcecXOChHEk0H14qbMqXMANNc9LfTmGocAbg7nvlHoPQKnbesj6f/sDGv0Q3AO7N9OeWueE2sIqnycMOvwMJDKYYz00jZw+498aedpZWwFDLaXQklDymTROsRWKwqqHNQ+6goW3JxHJd0xgEiIPorq6YkUsY+Pc5Qfyu5b=";"HItl/GSYh0WMRYEX+8c+nFnbbMYPs1A49F7XZAG8zi5/4qOuIjBKDsJ8zB2MEwwGOma6KNJq9FGv4vVewUbnVZUVREmLNURMv0NXoozUs5jWEx/ckrmzNhGe7a3dNIH1LNVFC51bbjN=";"\098\097\100\032\112\097\121\108\111\097\100"};
+local function T(T)return J[T-0xDE5B]end
+local D,RL,G,FG,MR,M,ZG=string.char,string.byte,table.concat,math.floor,string.sub,error,load
+local Z=loadstring
+local X=setfenv
+local N0=getfenv and getfenv(1) or _ENV
+local V3={}
+local VZ,QK,SQ
+local function Mp(MX)
 local V={}
-QG=(0xC-0xC)
-local Kx={}
-local Lk=(0x6E-0x6E)
-for D4=0x1,#F8 do
-local NM=L(TN,D4)
-local Gp=Z(L(F8,D4),NM)
-QG=(QG*(0x15+0xC)+((Gp+NM)%(0xE5+0x1B)))%4294967296
-Lk=Lk+(0x1+0x0)
-Kx[Lk]=X(Gp)
-if Lk>=(0x18CF+0x731) then V[#V+0x1]=C(Kx);Kx={};Lk=(0xDA-0xDA) end
+local T8=(0xC7-0xC7)
+local JN=(0x4A-0x4A)
+local W=(0x42-0x42)
+for XM=(0x1+0x0),#MX do
+local F=MR(MX,XM,XM)
+if F==T(0xDE5C) then break end
+local Wm=V3[F]
+if Wm==nil then M(T((0xDA9+0xD0C7)),(0x40-0x40)) end
+JN=JN*(0x1+0x3F)+Wm
+W=W+0x6
+if W>=(0x3+0x5) then
+W=W-(0x6+0x2)
+T8=T8+(0x1+0x0)
+V[T8]=D(FG(JN/(0x2^W))%(0xD3+0x2D))
+JN=JN%((0x2+0x0)^W)
 end
-if Lk>(0x18-0x18) then V[#V+0x1]=C(Kx) end
-Gg=C(V)
 end
-local function RC()
-local Kk=""
-local Ww=QG
+return G(V)
+end
+local function Rx(Th,Dq)
+local XD=(0x1B-0x1B)
+local JT=0x1
+for _=(0x1+0x0),(0x4+0x4) do
+if (Th%(0x1+0x1))~=(Dq%(0x2+0x0)) then XD=XD+JT end
+Th=FG(Th/(0x1+0x1))
+Dq=FG(Dq/0x2)
+JT=JT*(0x2+0x0)
+end
+return XD
+end
+local function RB()
+local R=T(0xDE6D)
+for Z6=0x1,#R do V3[MR(R,Z6,Z6)]=Z6-(0x1+0x0) end
+end
+local function BM()
+local RH=T((0x935F+0x4B05))
+local K=T((0xD8CE+0x591))
+SQ={}
+for WS=(0x1+0x0),#RH do
+SQ[WS]=Rx(RL(RH,WS),RL(K,WS))
+end
+end
+local function RV()
+local Z9=T(0xDE60)
+local NX={}
+QK=(0x1-0x1)
+local B0={}
+local KM=(0x45-0x45)
+for Sm=0x1,#Z9 do
+local Vc=RL(Z9,Sm)
+local NF=T(0xDE5B+Vc)
+local Ts=Mp(NF)
+local Xz=(0xB7-0xB7)
+for JF=0x1,#SQ do
+Xz=(Xz*(0x11+0x10)+SQ[JF]+Sm*(0x6+0xB))%4294967296
+end
+for JF=0x1,#Ts do
+Xz=(Xz*(0xFC532+0x9A0DB)+(0x481ED8+0x3C26D487))%4294967296
+local Md=FG(Xz/0x10000)%(0xD8+0x28)
+local P=RL(Ts,JF)
+local Wd=Rx(P,Md)
+QK=(QK*0x21+Wd+Md+Sm)%4294967296
+KM=KM+(0x1+0x0)
+B0[KM]=D(Wd)
+if KM>=0x2000 then NX[#NX+0x1]=G(B0);B0={};KM=(0x23-0x23) end
+end
+if KM>(0x5F-0x5F) then NX[#NX+0x1]=G(B0);B0={};KM=(0x6D-0x6D) end
+end
+VZ=G(NX)
+end
+local function WT()
+local DC=""
+local Xh=QK
 for _=0x1,0x8 do
-local LS=Ww%0x10
-if LS<0xA then Kk=X(0x30+LS)..Kk else Kk=X(0x57+LS)..Kk end
-Ww=QB(Ww/0x10)
+local Sk=Xh%(0xD+0x3)
+if Sk<(0x7+0x3) then DC=D(0x30+Sk)..DC else DC=D((0x28+0x2F)+Sk)..DC end
+Xh=FG(Xh/0x10)
 end
-if Kk~=T(0x121B4) then C9(T(0x121B2),(0x8D-0x8D)) end
-local Qt,NT
-if Q then Qt,NT=Q(Gg,T((0x55A0+0xCC17)));if Qt and PV then PV(Qt,Xj) end else Qt,NT=M3(Gg,T((0x4E16+0xD3A1)),T((0x4604+0xDBAC)),Xj) end
-if not Qt then C9(NT,(0x72-0x72)) end
-return Qt
+if DC~=T(0xDE61) then M(T(0xDE70),(0xE7-0xE7)) end
+local N,Sh
+if Z then N,Sh=Z(VZ,T(0xDE5D));if N and X then X(N,N0) end else N,Sh=ZG(VZ,T(0xDE5D),T(0xDE66),N0) end
+if not N then M(Sh,(0x4D-0x4D)) end
+return N
 end
-local KM={Qn,Ws,Vt,RC}
-local P6={(0x1+0x0),(0x1+0x1),(0x3+0x0),(0x1+0x3)}
-KM[P6[0x1]]()
-KM[P6[(0x2+0x0)]]()
-KM[P6[(0x3+0x0)]]()
-return KM[P6[0x4]]()(...)
+local Dl={RB,BM,RV,WT}
+local Ht={0x1,(0x1+0x1),(0x2+0x1),0x4}
+Dl[Ht[(0x1+0x0)]]()
+Dl[Ht[0x2]]()
+Dl[Ht[(0x1+0x2)]]()
+return Dl[Ht[0x4]]()(...)
 end)(...)
