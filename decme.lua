@@ -1,1 +1,1 @@
-
+logToConsole("Script maintence")
