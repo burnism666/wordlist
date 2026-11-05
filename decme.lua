@@ -1255,8 +1255,8 @@ local vfOpenDialog
 
 local function vfInit()
     local CFG = {
-        API        = "https://vend.aping.cloud/vend/items",
-        API_DEALS  = "https://vend.aping.cloud/vend/deals",
+        API        = "https://vend.burem.site/vend/items",
+        API_DEALS  = "https://vend.burem.site/vend/deals",
         DISCORDID  = "1327891399013699678",
         PASS       = "G6mKzXVCRkYtdMs0KEQLhGsN",
         TIMEOUT    = 45000,
