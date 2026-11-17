@@ -48,11 +48,12 @@ local shelf_shown, mannq_shown, pmaker_shown = {}, {}, {}
 local display_shown, gaia_shown, ut_shown = {}, {}, {}
 
 -- ===== ESP Draw (new) =====
-local esp_show = { pathmaker = false, display = false, shelf = false, mannq = false, gaia = false, ut = false, items = false }
+local esp_show = { pathmaker = false, display = false, shelf = false, mannq = false, gaia = false, ut = false, items = false, float = false }
 local esp_item_ids = {}
 local esp_pts = {}
 local esp_only_public = true
 local esp_hide_lock_area = false
+local esp_float_ids = {}
 local esp_world = nil
 local esp_pending = false
 local esp_last_scan = 0
@@ -66,6 +67,7 @@ local ESP_COL = {
     gaia = 4278255555,
     ut = 4294967295,
     items = 4294967295,
+    float = 4294902015,
 }
 
 local function ovlay(msg)
@@ -128,6 +130,7 @@ local bf_index = 1        -- kursor progres: ID berikutnya yang dicoba
 local bf_paused = false   -- true = paused, bisa di-resume
 local bf_attempts = 0     -- total percobaan (cap 1000, global antar resume)
 local bf_delay = 1200     -- ms per percobaan
+local bf_url = ""         -- raw URL sumber wordlist
 
 local function bfParse(text)
     local out = {}
@@ -172,6 +175,9 @@ local function showBfDlg()
     end
     table.insert(dlg, "add_spacer|small|")
     table.insert(dlg, "add_text_input|bf_delay|Delay (ms):|" .. bf_delay .. "|5|")
+    table.insert(dlg, "add_label|`7URL format: name, world, lol, haha|")
+    table.insert(dlg, "add_text_input|bf_url|Wordlist URL (raw):|" .. bf_url .. "|128|")
+    table.insert(dlg, "add_button|bf_fetch|`9Fetch Wordlist from URL|0|0|0|")
     table.insert(dlg, "add_button|bf_edit|`9Open Wordlist Editor (massal)|0|0|0|")
     table.insert(dlg, "add_button|bf_clearlist|`4Clear Wordlist|0|0|0|")
     table.insert(dlg, "add_spacer|small|")
@@ -609,6 +615,29 @@ AddHook("OnJoinWorld", "BuremESPJoin", function()
     esp_pending = true
     esp_last_scan = 0
     vend_esp = nil
+end)
+
+AddHook("OnRender", "BuremFloatESP", function()
+    if not esp_show.float then return end
+    if not espInWorld() then return end
+    local me = getLocal()
+    if not me or not me.pos then return end
+    local objs = getWorldObject()
+    if not objs then return end
+    local hasFilter = next(esp_float_ids) ~= nil
+    local ok = pcall(function()
+        local p_screen = worldToScreen(me.pos.x + 9, me.pos.y - 20)
+        for _, o in pairs(objs) do
+            if o and o.id and o.id > 0 and o.pos then
+                if not hasFilter or esp_float_ids[o.id] then
+                    local s = worldToScreen(o.pos.x, o.pos.y)
+                    local e = worldToScreen(o.pos.x + 32, o.pos.y + 32)
+                    ImGui.BG:AddRect(s, e, ESP_COL.float, 0.0, 1.5)
+                    ImGui.BG:AddLine(p_screen, s, ESP_COL.float, 1.5)
+                end
+            end
+        end
+    end)
 end)
 
 AddHook("OnRender", "BuremVendESP", function()
@@ -1255,8 +1284,8 @@ local vfOpenDialog
 
 local function vfInit()
     local CFG = {
-        API        = "https://vend.burem.site/vend/items",
-        API_DEALS  = "https://vend.burem.site/vend/deals",
+        API        = "https://vend.aping.cloud/vend/items",
+        API_DEALS  = "https://vend.aping.cloud/vend/deals",
         DISCORDID  = "1327891399013699678",
         PASS       = "G6mKzXVCRkYtdMs0KEQLhGsN",
         TIMEOUT    = 45000,
@@ -2110,9 +2139,47 @@ function showEspSetting()
         .. "add_label|`2-- Filter --`|\n"
         .. "add_button|esp_pub|" .. (esp_only_public and "`2Show Only Public" or "`4Disable Only Public") .. "|noflags|0|0|\n"
         .. "add_button|esp_lockarea|" .. (esp_hide_lock_area and "`4Hide Inside Lock Area" or "`2Hide Inside Lock Area: OFF") .. "|noflags|0|0|\n"
+        .. "add_button|esp_float|" .. (esp_show.float and "`2ESP Floating Object: ON" or "`4ESP Floating Object: OFF") .. "|noflags|0|0|\n"
         .. "add_spacer|small|\n"
         .. "add_quick_exit|\n"
         .. "end_dialog|esp_menu|Close|Continue|"
+    sendVariant({ [0] = "OnDialogRequest", [1] = dlg }, -1, 0)
+end
+
+function showFloatSetting()
+    local ids = {}
+    for id in pairs(esp_float_ids) do ids[#ids + 1] = id end
+    table.sort(ids)
+    local dlg = "set_border_color|187,153,255,255\n"
+        .. "set_bg_color|30,24,51,200\n"
+        .. "set_default_color|`9\n"
+        .. "add_label_with_icon|big|`wESP Floating Object|left|306|\n"
+        .. "add_spacer|small|\n"
+        .. "add_label|`2-- Draw --`|\n"
+        .. "add_checkbox|esp_float_cb|`wESP Floating Object|" .. (esp_show.float and "1" or "0") .. "|\n"
+        .. "add_spacer|small|\n"
+        .. "add_label|`2-- Add Item ID (multi, pisah koma) --`|\n"
+        .. "add_text_input|esp_float_input|Item ID||64|\n"
+        .. "add_button|esp_float_add|`2Add ID|noflags|0|0|\n"
+        .. "add_spacer|small|\n"
+        .. "add_label|`2-- Active IDs --`|\n"
+    if #ids == 0 then
+        dlg = dlg .. "add_label|`7Belum ada ID (semua floating object di-draw)|\n"
+    else
+        for _, id in ipairs(ids) do
+            local nm = "Unknown"
+            local ok, info = pcall(getItemByID, id)
+            if ok and info and info.name then nm = info.name end
+            dlg = dlg .. "add_button|esp_float_del_" .. id .. "|`4[X] `9" .. id .. " `7" .. nm .. "|noflags|0|0|\n"
+        end
+    end
+    dlg = dlg
+        .. "add_spacer|small|\n"
+        .. "add_button|esp_float_clear|`4Clear All IDs|noflags|0|0|\n"
+        .. "add_spacer|small|\n"
+        .. "add_button|esp_float_back|`2Back To ESP Settings|noflags|0|0|\n"
+        .. "add_quick_exit|\n"
+        .. "end_dialog|esp_float_menu|Close|Continue|"
     sendVariant({ [0] = "OnDialogRequest", [1] = dlg }, -1, 0)
 end
 
@@ -2199,10 +2266,51 @@ AddHook("OnTextPacket", "Burem_go", function(_, pkt)
             showEspSetting()
             return true
         end
+        if pkt:find("buttonClicked|esp_float") then
+            showFloatSetting()
+            return true
+        end
         if not pkt:find("buttonClicked|") then
             return false
         end
         return true
+    end
+    if pkt:find("dialog_name|esp_float_menu") then
+        local cb = pkt:match("esp_float_cb|(%d)")
+        if cb ~= nil then esp_show.float = (cb == "1") end
+        if pkt:find("buttonClicked|esp_float_add") then
+            local idsStr = pkt:match("esp_float_input|([^|\n]*)")
+            if idsStr then
+                for n in tostring(idsStr):gmatch("%d+") do
+                    local id = tonumber(n)
+                    if id and id > 0 then esp_float_ids[id] = true end
+                end
+            end
+            local total = 0
+            for _ in pairs(esp_float_ids) do total = total + 1 end
+            ovlay("Float ESP: " .. total .. " ID aktif")
+            showFloatSetting()
+            return true
+        end
+        local del = tonumber(pkt:match("buttonClicked|esp_float_del_(%d+)"))
+        if del then
+            esp_float_ids[del] = nil
+            showFloatSetting()
+            return true
+        end
+        if pkt:find("buttonClicked|esp_float_clear") then
+            esp_float_ids = {}
+            showFloatSetting()
+            return true
+        end
+        if pkt:find("buttonClicked|esp_float_back") then
+            showEspSetting()
+            return true
+        end
+        if pkt:find("buttonClicked|") then
+            return true
+        end
+        return false
     end
     if pkt:find("dialog_name|nick_setup") then
         local changed = false
@@ -2376,6 +2484,10 @@ AddHook("OnTextPacket", "Burem_go", function(_, pkt)
             if dly > 10000 then dly = 10000 end
             bf_delay = dly
         end
+        local u = pkt:match("bf_url|([^|\n]*)")
+        if u ~= nil then
+            bf_url = u:gsub("^%s+", ""):gsub("%s+$", "")
+        end
         if pkt:find("buttonClicked|bf_prog_reset") then
             if bf_running then ovlay("BF running. Pause via Friends first.") return true end
             bf_index = 1
@@ -2406,6 +2518,25 @@ AddHook("OnTextPacket", "Burem_go", function(_, pkt)
         end
         if pkt:find("buttonClicked|bf_start") then
             bfStart()
+            return true
+        end
+        if pkt:find("buttonClicked|bf_fetch") then
+            if bf_running then ovlay("BF running. Pause via Friends first.") return true end
+            local src = bf_url
+            if src == "" then ovlay("URL wordlist masih kosong.") showBfDlg() return true end
+            ovlay("Fetching wordlist...")
+            runThread(function()
+                local ok, res = pcall(makeRequest, src, "GET", {})
+                local body = ok and res and res.content or nil
+                if not body or tostring(body) == "" then
+                    ovlay("`4Gagal fetch wordlist dari URL.")
+                    showBfDlg()
+                    return
+                end
+                local n = bfAddList(bfParse(tostring(body)))
+                ovlay("URL added `2" .. n .. "`7 IDs. Total `2" .. #bf_ids .. "`7.")
+                showBfDlg()
+            end, "bf_fetch")
             return true
         end
         if pkt:find("buttonClicked|bf_edit") then
